@@ -33,7 +33,7 @@
   <lib desc="#BFH-Praktika" name="10"/>
   <lib desc="#Input/Output-Extra" name="11"/>
   <lib desc="#Soc" name="12"/>
-  <main name="main"/>
+  <main name="ParIS_Router"/>
   <options>
     <a name="gateUndefined" val="ignore"/>
     <a name="simlimit" val="1000"/>
@@ -66,9 +66,9 @@
     <tool lib="5" name="D Flip-Flop"/>
     <tool lib="5" name="Register"/>
   </toolbar>
-  <circuit name="main">
+  <circuit name="ParIS_Router">
     <a name="appearance" val="logisim_evolution"/>
-    <a name="circuit" val="main"/>
+    <a name="circuit" val="ParIS_Router"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
   </circuit>
@@ -2527,19 +2527,19 @@
     <comp lib="5" loc="(640,400)" name="D Flip-Flop">
       <a name="appearance" val="logisim_evolution"/>
     </comp>
-    <comp lib="9" loc="(1203,511)" name="Text">
+    <comp lib="9" loc="(1200,510)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="wr_handshake"/>
     </comp>
-    <comp lib="9" loc="(366,323)" name="Text">
+    <comp lib="9" loc="(365,320)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="wr_credit"/>
     </comp>
-    <comp lib="9" loc="(742,401)" name="Text">
+    <comp lib="9" loc="(740,400)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="ret_credit"/>
     </comp>
-    <comp lib="9" loc="(747,700)" name="Text">
+    <comp lib="9" loc="(745,700)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="ret_handshake"/>
     </comp>
@@ -2990,19 +2990,19 @@
       <a name="appearance" val="logisim_evolution"/>
       <a name="width" val="2"/>
     </comp>
-    <comp lib="9" loc="(1221,271)" name="Text">
+    <comp lib="9" loc="(1220,270)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="val_credit"/>
     </comp>
-    <comp lib="9" loc="(1223,332)" name="Text">
+    <comp lib="9" loc="(1220,330)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="rd_credit"/>
     </comp>
-    <comp lib="9" loc="(798,424)" name="Text">
+    <comp lib="9" loc="(795,420)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="val_handshake"/>
     </comp>
-    <comp lib="9" loc="(916,484)" name="Text">
+    <comp lib="9" loc="(915,480)" name="Text">
       <a name="font" val="SansSerif bold 14"/>
       <a name="text" val="rd_handshake"/>
     </comp>
@@ -3456,10 +3456,179 @@
     <a name="circuit" val="Xout"/>
     <a name="circuitnamedboxfixedsize" val="true"/>
     <a name="simulationFrequency" val="1.0"/>
-    <comp loc="(280,100)" name="fifo"/>
-    <comp loc="(290,390)" name="ofc"/>
-    <comp loc="(400,280)" name="ods"/>
-    <comp loc="(600,130)" name="oc"/>
-    <comp loc="(880,130)" name="ows"/>
+    <comp lib="0" loc="(1090,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="x_gnt"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="type" val="output"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(1100,180)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="x_idle"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1330,360)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out_data"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="type" val="output"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(1390,490)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="x_rd"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(1530,630)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="facing" val="west"/>
+      <a name="label" val="out_val"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="type" val="output"/>
+    </comp>
+    <comp lib="0" loc="(240,240)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="CLK"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(240,280)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="RST"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(240,690)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="FIFO_TYPE"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(240,740)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="out_ret"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(240,790)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="FC_TYPE"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+    </comp>
+    <comp lib="0" loc="(260,140)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_req"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(260,370)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_rok"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="4"/>
+    </comp>
+    <comp lib="0" loc="(300,450)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_din0"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(300,510)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_din1"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(300,570)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_din2"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp lib="0" loc="(300,630)" name="Pin">
+      <a name="appearance" val="classic"/>
+      <a name="label" val="x_din3"/>
+      <a name="labelfont" val="SansSerif bold 14"/>
+      <a name="width" val="10"/>
+    </comp>
+    <comp loc="(1210,430)" name="fifo"/>
+    <comp loc="(1470,630)" name="ofc"/>
+    <comp loc="(560,470)" name="ods"/>
+    <comp loc="(780,140)" name="oc"/>
+    <comp loc="(780,350)" name="ows"/>
+    <wire from="(1210,430)" to="(1270,430)"/>
+    <wire from="(1210,450)" to="(1230,450)"/>
+    <wire from="(1210,470)" to="(1270,470)"/>
+    <wire from="(1230,450)" to="(1230,650)"/>
+    <wire from="(1230,650)" to="(1250,650)"/>
+    <wire from="(1270,360)" to="(1270,430)"/>
+    <wire from="(1270,360)" to="(1330,360)"/>
+    <wire from="(1270,470)" to="(1270,490)"/>
+    <wire from="(1270,490)" to="(1390,490)"/>
+    <wire from="(1470,630)" to="(1530,630)"/>
+    <wire from="(1470,650)" to="(1500,650)"/>
+    <wire from="(1500,650)" to="(1500,780)"/>
+    <wire from="(240,240)" to="(540,240)"/>
+    <wire from="(240,280)" to="(510,280)"/>
+    <wire from="(240,690)" to="(800,690)"/>
+    <wire from="(240,740)" to="(830,740)"/>
+    <wire from="(240,790)" to="(860,790)"/>
+    <wire from="(260,140)" to="(560,140)"/>
+    <wire from="(260,370)" to="(560,370)"/>
+    <wire from="(300,450)" to="(380,450)"/>
+    <wire from="(300,510)" to="(380,510)"/>
+    <wire from="(300,570)" to="(390,570)"/>
+    <wire from="(300,630)" to="(410,630)"/>
+    <wire from="(380,450)" to="(380,470)"/>
+    <wire from="(380,470)" to="(560,470)"/>
+    <wire from="(380,490)" to="(380,510)"/>
+    <wire from="(380,490)" to="(560,490)"/>
+    <wire from="(390,530)" to="(390,570)"/>
+    <wire from="(390,530)" to="(560,530)"/>
+    <wire from="(410,550)" to="(410,630)"/>
+    <wire from="(410,550)" to="(560,550)"/>
+    <wire from="(490,310)" to="(490,350)"/>
+    <wire from="(490,310)" to="(840,310)"/>
+    <wire from="(490,350)" to="(490,570)"/>
+    <wire from="(490,350)" to="(560,350)"/>
+    <wire from="(490,570)" to="(560,570)"/>
+    <wire from="(510,160)" to="(510,280)"/>
+    <wire from="(510,160)" to="(560,160)"/>
+    <wire from="(510,280)" to="(890,280)"/>
+    <wire from="(520,430)" to="(520,510)"/>
+    <wire from="(520,430)" to="(990,430)"/>
+    <wire from="(520,510)" to="(560,510)"/>
+    <wire from="(540,180)" to="(540,240)"/>
+    <wire from="(540,180)" to="(560,180)"/>
+    <wire from="(540,240)" to="(920,240)"/>
+    <wire from="(780,140)" to="(840,140)"/>
+    <wire from="(780,160)" to="(800,160)"/>
+    <wire from="(780,350)" to="(800,350)"/>
+    <wire from="(800,160)" to="(800,180)"/>
+    <wire from="(800,180)" to="(1100,180)"/>
+    <wire from="(800,350)" to="(800,510)"/>
+    <wire from="(800,510)" to="(990,510)"/>
+    <wire from="(800,530)" to="(800,690)"/>
+    <wire from="(800,530)" to="(990,530)"/>
+    <wire from="(830,630)" to="(1250,630)"/>
+    <wire from="(830,630)" to="(830,740)"/>
+    <wire from="(840,140)" to="(1090,140)"/>
+    <wire from="(840,140)" to="(840,310)"/>
+    <wire from="(860,710)" to="(1250,710)"/>
+    <wire from="(860,710)" to="(860,790)"/>
+    <wire from="(890,280)" to="(890,470)"/>
+    <wire from="(890,470)" to="(890,670)"/>
+    <wire from="(890,470)" to="(990,470)"/>
+    <wire from="(890,670)" to="(1250,670)"/>
+    <wire from="(920,240)" to="(920,450)"/>
+    <wire from="(920,450)" to="(920,690)"/>
+    <wire from="(920,450)" to="(990,450)"/>
+    <wire from="(920,690)" to="(1250,690)"/>
+    <wire from="(960,490)" to="(960,780)"/>
+    <wire from="(960,490)" to="(990,490)"/>
+    <wire from="(960,780)" to="(1500,780)"/>
   </circuit>
 </project>
