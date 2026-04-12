@@ -85,5 +85,3 @@ Force um engarrafamento para testar a justiça do juiz:
 ## 🛠️ Requisitos
 * [Logisim-evolution](https://github.com/logisim-evolution/logisim-evolution) (Recomendado) ou Logisim original.
 
-## 🎓 Agradecimentos / Notas
-Este projeto foi desenvolvido como um exercício profundo de Arquitetura de Computadores e Design de Hardware (RTL), convertendo lógicas descritivas complexas em um esquemático funcional e simulável visualmente.
